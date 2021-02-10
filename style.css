@@ -1,0 +1,31 @@
+body{
+    background-color: grey;
+}
+
+#container1{
+    background-color: yellow;
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#container2{
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div{
+    border: 2px solid black;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+}
+
+h1{
+    color: black;
+}
