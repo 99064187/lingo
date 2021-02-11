@@ -1,11 +1,13 @@
 body{
-    background-color: grey;
+    background-color: #002FCF;
 }
 
 #container1{
-    background-color: yellow;
+    background-image: url("lingo-logo.png");
+    background-size: cover;
+    background-position: center;
     width: 600px;
-    height: 100px;
+    height: 125px;
     margin: 0 auto;
 }
 

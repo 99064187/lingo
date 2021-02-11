@@ -2,10 +2,9 @@ var container2=document.getElementById("container2");
 var button=document.getElementById("button");
 var randomWoord;
 var woordletters=[];
-var woordletterskopie=[];
 var inputletters=[];
 var pogingen=0;
-
+var woordletterskopie=[];
 for(var j=1; j<=5; j++){
 	for(var i=1; i<=5; i++){
 		var block= document.createElement("div");
@@ -26,7 +25,8 @@ function eersteLetter(){
 function woordSplit(woord){
 	woordletters = randomWoord.split("");
     for(var i=0;i<randomWoord.length;i++)
-
+	woordletterskopie= woordletters.slice(0,5);
+	console.log(woordletterskopie);
 	inputletters=woord.split("");
 	for(var i=0; i<woord.length; i++){
 		console.log(inputletters[i]);
@@ -49,6 +49,7 @@ function woordCheck(woord){
 		
 		if(inputletters[i]==woordletters[i]){
 			document.getElementById("woord" + pogingen + "letter" +(i+1)).style.backgroundColor="green";
+			woordletters[i]=null;
 		}
 		else{
 			if(woordletters.includes(inputletters[i])){
@@ -60,6 +61,5 @@ function woordCheck(woord){
 	}
 
 }
-
 random();
 eersteLetter();
