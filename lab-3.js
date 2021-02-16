@@ -51,14 +51,23 @@ function woordCheck(woord){
 			document.getElementById("woord" + pogingen + "letter" +(i+1)).style.backgroundColor="green";
 			woordletters[i]=null;
 		}
-		else{
+		
+	}
+	for(var i=0; i<inputletters.length; i++){
+		document.getElementById("woord" + pogingen + "letter" +(i+1)).innerHTML="<h1></h1>"+ inputletters[i];
+		
+		if(inputletters[i]==woordletters[i]){
+			document.getElementById("woord" + pogingen + "letter" +(i+1)).style.backgroundColor="green";
+		}
+		
 			if(woordletters.includes(inputletters[i])){
 				document.getElementById("woord" + pogingen + "letter" +(i+1)).style.backgroundColor="yellow";
 				document.getElementById("woord" + pogingen + "letter" +(i+1)).style.borderRadius="50%";
 
 			}
-		}
 	}
+
+
 
 }
 random();
